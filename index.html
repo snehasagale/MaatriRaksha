@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#087F8C">
+  <meta name="description" content="MaatriRaksha is an academic prototype for maternal warning-sign awareness and referral handover.">
+  <title>MaatriRaksha — Recognize Early. Refer Early.</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+      <a class="brand" href="#dashboard" aria-label="MaatriRaksha home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" fill="none"><path d="M20 35S5 26.7 5 15.2C5 9.6 9 6 13.7 6c3 0 5.1 1.7 6.3 4 1.2-2.3 3.3-4 6.3-4C31 6 35 9.6 35 15.2 35 26.7 20 35 20 35Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M13 20h4l2-5 3.5 11 2-6H29" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="brand-copy"><strong>MaatriRaksha</strong><small data-i18n="tagline">Recognize Early. Refer Early.</small></span>
+      </a>
+      <div class="nav-label" data-i18n="workspace">WORKSPACE</div>
+      <nav class="primary-nav">
+        <a href="#dashboard" data-page="dashboard"><span class="nav-icon">⌂</span><span data-i18n="navDashboard">Dashboard</span></a>
+        <a href="#assessment" data-page="assessment"><span class="nav-icon">＋</span><span data-i18n="navCheck">New maternal check</span></a>
+        <a href="#facilities" data-page="facilities"><span class="nav-icon">⌖</span><span data-i18n="navFacilities">Find referral facility</span></a>
+        <a href="#tracking" data-page="tracking"><span class="nav-icon">↗</span><span data-i18n="navTracking">Referral tracking</span><span class="nav-count" id="tracking-count">0</span></a>
+        <a href="#records" data-page="records"><span class="nav-icon">▤</span><span data-i18n="navRecords">Saved records</span></a>
+      </nav>
+      <div class="sidebar-bottom">
+        <a href="#settings" data-page="settings"><span class="nav-icon">⚙</span><span data-i18n="navSettings">Settings & language</span></a>
+        <div class="sidebar-note"><span class="note-icon">ⓘ</span><span data-i18n="prototypeNote">Academic prototype · Sample data only</span></div>
+      </div>
+    </aside>
+    <div class="app-main">
+      <header class="topbar">
+        <div class="topbar-leading">
+          <button class="icon-button menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+          <div class="breadcrumb"><span data-i18n="prototype">Prototype</span><span class="breadcrumb-divider">/</span><strong id="page-title">Dashboard</strong></div>
+        </div>
+        <div class="topbar-actions">
+          <div class="connection-pill" id="connection-status" role="status"><span class="status-dot"></span><span id="connection-label">Online</span></div>
+          <label class="language-control"><span class="sr-only" data-i18n="language">Language</span><span aria-hidden="true">文</span><select id="language-select" aria-label="Language"><option value="en">English</option><option value="hi">हिन्दी</option><option value="mr">मराठी</option></select></label>
+          <div class="worker-avatar" aria-label="Frontline health worker">AS</div>
+        </div>
+      </header>
+      <main id="main-content" tabindex="-1"></main>
+      <footer class="app-footer"><span data-i18n="footerPrototype">Academic concept prototype · Not for clinical use</span><span data-i18n="footerPrivacy">No real patient information should be entered</span></footer>
+    </div>
+    <div class="sidebar-scrim" id="sidebar-scrim"></div>
+    <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
+  </div>
+</body>
+</html>
